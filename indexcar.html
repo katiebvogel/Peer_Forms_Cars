@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "utf-8"/ />
+  <title>Car Ratings</title>
+  <link rel = "stylesheet" type = "text/css" href = "stylesheet.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src = "scriptcar.js"></script>
+
+</head>
+
+
+<body>
+
+  <h1>Used Car Ratings</h1>
+
+   <form id="car">
+
+     <label for="make">Make: </label>
+     <input type="text" name="Make" id="make" />
+     <br  />
+     <label for="model">Model: </label>
+     <input type="text" name="model" id="model" />
+     <br  />
+     <label for="year">Year: </label>
+     <input type="number" name="position" id="year" />
+     <br  />
+     <label for="color">Color: </label>
+     <input type="text" name="Color" id="color" />
+     <br  />
+
+     <label for="rating">Rating: </label>
+     <input type="number" name="rating" id ="rating" min="1" max="5"/>
+     <br  />
+     <label for="price">Price: </label>
+     <input type="number" name="price" id="price" />
+     <br / />
+     <input type="submit" />
+
+
+
+   </form>
+  <div id = "container">
+  </div>
+
+</body>
+</html>
