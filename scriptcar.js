@@ -15,36 +15,21 @@ $(function() {
     count++;
     var carNum = "#car" + count;
     console.log(carNum);
-    $('#container').append('<div id=\"car' + count+'\"><ul>Car '+count+'<li>'+make+'</li><li>'+model+'</li><li>'+year+'</li><li>'+color+'</li><li>'+rating+'</li><li>'+price+'</li></ul></div>');
+    $('#container').append('<div id=\"car' + count+'\"><ul><h2>Car '+count+'</h2><li>Make: '+make+'</li><li>Model: '+model+'</li><li>Year: '+year+'</li><li>Color: '+color+'</li><li>Rating: '+rating+'</li><li>Price: '+price+'</li><li><button class=\"delete\">Remove</button></li></ul></div>');
     // ratingCheck(rating);
-    $('h1').css('background-color', 'purple');
+
+    $(".delete").on("click", function(){
+      $(this).closest('div').remove();
+    });
+
     if (rating < 3){
-      $(carNum).css('border', 'solid red');
+      $(carNum).addClass('bad');
     }else{
-      $(carNum).css('border', 'solid green');
+      $(carNum).addClass('good');
     }
 
   });
 
-  $("#car").on("submit", function(event){
-    // totalArr.push(this.make, this.model);
-
-    // console.log('serializeArray', $('#car').serializeArray()[0].value);
-
-    // console.log(totalArr);
-
-
 });
 
-
-//Eventually we will use
-//$('.close-div').click(function(){
-//$(this).parent().remove();
-//});
-
-
 });
-
-function ratingCheck(val){
-
-};
